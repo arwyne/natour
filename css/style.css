@@ -210,6 +210,20 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+/* line 1, sass/components/_bg-video.scss */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  /* line 12, sass/components/_bg-video.scss */
+  .bg-video__content {
+    object-fit: cover; }
+
 /* line 1, sass/components/_card.scss */
 .card {
   perspective: 150rem;
@@ -385,6 +399,58 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+/* line 1, sass/components/_story.scss */
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  /* line 16, sass/components/_story.scss */
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: indianred;
+    position: relative;
+    transform: translateX(-3rem) skewX(12deg);
+    border-radius: 50%;
+    overflow: hidden; }
+  /* line 35, sass/components/_story.scss */
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  /* line 42, sass/components/_story.scss */
+  .story__text {
+    transform: skewX(12deg); }
+  /* line 46, sass/components/_story.scss */
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  /* line 60, sass/components/_story.scss */
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  /* line 65, sass/components/_story.scss */
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
 /* line 1, sass/layout/_grid.scss */
 .row {
   max-width: 114rem;
@@ -469,3 +535,8 @@ body {
   background-color: #f7f7f7;
   margin-top: -12rem;
   padding: 25rem 0 15rem 0; }
+
+/* line 31, sass/pages/_home.scss */
+.section-stories {
+  padding: 15rem 0;
+  position: relative; }
